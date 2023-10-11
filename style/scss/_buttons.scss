@@ -1,0 +1,37 @@
+/** Buttons **/
+@mixin btn-base {
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+
+@mixin btn-bw {
+    color: #000;
+    background-color: #fff;
+}
+
+.btn {
+    @include btn-base;
+    .bw {
+        @include btn-bw;
+    }
+    .hover-bw {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            border-radius: 3px;
+            color: #fff;
+            mix-blend-mode: difference;
+            transition: height 0.5s;
+        }
+        &:hover::after {
+            height: 100%;
+        }
+    }
+}

@@ -4,9 +4,8 @@ $secondary: #fff34d;
 $accent-1: #FF0C48;
 $accent-2: #710cff;
 
-
 /* Gradients */
-$grad-1: radial-gradient(ellipse at 60% 45%, $accent, transparent 35%);
+$grad-1: radial-gradient(ellipse at 60% 45%, $accent-1, transparent 35%);
 $grad-2: radial-gradient(ellipse at 90% 75%, $secondary, transparent 60%);
 
 /* Borders */
@@ -16,3 +15,5 @@ $main-w: 3px solid #fff;
 /* Fonts */
 $fam-head: 'Slackside One', cursive;
 $fam-reg: 'Karla', sans-serif;
+
+/* End of sass variables */
