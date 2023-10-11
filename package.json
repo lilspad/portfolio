@@ -4,7 +4,7 @@
   "description": "lily paczesniak projects portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w sass -o css"
+    "sass": "node-sass -w style/scss -o style/css"
   },
   "author": "Lily Paczesniak",
   "license": "MIT",
