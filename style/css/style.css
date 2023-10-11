@@ -1,15 +1,68 @@
-/* Colors */
-/* Gradients */
-/* Borders */
-/* Fonts */
-/* End of sass variables */
 /* Flex */
 .flex {
   display: flex; }
-  .flex.col {
-    flex-direction: column; }
+  .flex.g-10 {
+    gap: 10px; }
+  .flex.g-20 {
+    gap: 20px; }
+  .flex.g-50 {
+    gap: 50px; }
   .flex.wrap {
     flex-wrap: wrap; }
+  .flex.col {
+    flex-direction: column; }
+  .flex.ag-c {
+    align-items: center; }
+  .flex.jus-c {
+    justify-content: center; }
+
+/* Position */
+.pos-rel {
+  position: relative; }
+
+.pos-abs {
+  position: absolute; }
+
+/* Image display */
+.obf-cov {
+  object-fit: cover; }
+
+/* Dimensions */
+.w-full {
+  width: 100%; }
+
+.h-full {
+  height: 100%; }
+
+/* Margins */
+.m-auto {
+  margin: auto; }
+
+/* Padding */
+.pad-10-20 {
+  padding: 10px 20px; }
+
+.pad-10-30 {
+  padding: 10px 30px; }
+
+.pad-20 {
+  padding: 20px; }
+
+.pad-30 {
+  padding: 30px; }
+
+.pad-50 {
+  padding: 50px; }
+
+/* Border styles */
+.rounded-reg {
+  border-radius: 15px; }
+
+.rounded-s {
+  border-radius: 5px; }
+
+.rounded-full {
+  border-radius: 50%; }
 
 /** Buttons **/
 .btn {
