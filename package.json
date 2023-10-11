@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "lily paczesniak projects portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass -o css"
+  },
+  "author": "Lily Paczesniak",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
