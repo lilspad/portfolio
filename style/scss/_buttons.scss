@@ -13,10 +13,10 @@
 
 .btn {
     @include btn-base;
-    .bw {
+    &.bw {
         @include btn-bw;
     }
-    .hover-bw {
+    &.hover-bw {
         position: relative;
         &::after {
             content: '';

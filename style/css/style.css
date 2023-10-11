@@ -3,17 +3,25 @@
 /* Borders */
 /* Fonts */
 /* End of sass variables */
+/* Flex */
+.flex {
+  display: flex; }
+  .flex.col {
+    flex-direction: column; }
+  .flex.wrap {
+    flex-wrap: wrap; }
+
 /** Buttons **/
 .btn {
   padding: 10px 15px;
   border: 2px solid #000;
   border-radius: 5px; }
-  .btn .bw {
+  .btn.bw {
     color: #000;
     background-color: #fff; }
-  .btn .hover-bw {
+  .btn.hover-bw {
     position: relative; }
-    .btn .hover-bw::after {
+    .btn.hover-bw::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -24,5 +32,5 @@
       color: #fff;
       mix-blend-mode: difference;
       transition: height 0.5s; }
-    .btn .hover-bw:hover::after {
+    .btn.hover-bw:hover::after {
       height: 100%; }

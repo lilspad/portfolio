@@ -1,0 +1,39 @@
+/* Flex */
+.flex {
+    display: flex;
+    &.g-10 {
+        gap: 10px;
+    }
+    &.g-20 {
+        gap: 20px;
+    }
+    &.g-50 {
+        gap: 50px;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.col {
+        flex-direction: column;
+    }
+    &.ag-c {
+        align-items: center;
+    }
+    &.jus-c {
+        justify-content: center;
+    }
+}
+
+/* Position */
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+/* Image display */
+.obf-cov {
+    object-fit: cover;
+}
