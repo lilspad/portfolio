@@ -16,12 +16,25 @@
     &.col {
         flex-direction: column;
     }
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
     &.ag-c {
         align-items: center;
     }
     &.jus-c {
         justify-content: center;
     }
+    &.jus-end {
+        justify-content: end;
+    }
+    &.jus-between {
+        justify-content: space-between;
+    }
+}
+
+.ag-self-end {
+    align-self: end;
 }
 
 /* Position */

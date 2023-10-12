@@ -1,1 +1,8 @@
-@import 'variables/index', 'layout/index', 'spacing/index', 'misc/borders', 'buttons';
+/* General */
+
+main {
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'buttons';

@@ -30,7 +30,6 @@ const content2 = createElement("p", text2);
 
 const heading3 = createElement("h2", "CREDENTIALS", [["class", "heading"]]);
 const content3 = createElement("div", "", [["class", "flex g-10"]], linkElements);
-console.log(content3)
 
 const headings = [heading1, heading2, heading3];
 const content = [content1, content2, content3];

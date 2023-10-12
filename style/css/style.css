@@ -1,3 +1,30 @@
+/* General */
+main {
+  min-height: calc(100vh - 100px);
+  padding: 20px; }
+
+.heading {
+  font-family: "Slackside One", cursive;
+  font-size: 36px; }
+  .heading.huge {
+    font-size: 60px; }
+
+body {
+  line-height: 1.5;
+  font-family: "Karla", sans-serif; }
+
+.fs-1 {
+  font-size: 16px; }
+
+.fs-2 {
+  font-size: 20px; }
+
+.thin {
+  font-weight: 200; }
+
+.txt-right {
+  text-align: right; }
+
 /* Flex */
 .flex {
   display: flex; }
@@ -11,10 +38,19 @@
     flex-wrap: wrap; }
   .flex.col {
     flex-direction: column; }
+  .flex.row-reverse {
+    flex-direction: row-reverse; }
   .flex.ag-c {
     align-items: center; }
   .flex.jus-c {
     justify-content: center; }
+  .flex.jus-end {
+    justify-content: end; }
+  .flex.jus-between {
+    justify-content: space-between; }
+
+.ag-self-end {
+  align-self: end; }
 
 /* Position */
 .pos-rel {
@@ -33,6 +69,9 @@
 
 .h-full {
   height: 100%; }
+
+.h-80 {
+  height: 80px; }
 
 /* Margins */
 .m-auto {
@@ -64,6 +103,11 @@
 .rounded-full {
   border-radius: 50%; }
 
+.bg-b {
+  background-color: #000; }
+  .bg-b * {
+    color: #fff; }
+
 /** Buttons **/
 .btn {
   padding: 10px 15px;
@@ -82,6 +126,7 @@
       height: 0;
       width: 100%;
       border-radius: 3px;
+      background-color: #fff;
       color: #fff;
       mix-blend-mode: difference;
       transition: height 0.5s; }
