@@ -307,9 +307,9 @@ html[data-theme="light"] .bg-main {
     width: 540px;
     height: 540px;
     border-radius: 50%;
-    top: 105px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: end;
     justify-content: center;
@@ -326,7 +326,8 @@ html[data-theme="light"] .bg-main {
         padding-top: 140px; }
   .bg-spot::after {
     min-width: 600px;
-    max-width: 895px;
+    max-width: 900px;
+    max-height: 750px;
     background-size: 150%; }
   footer {
     padding: 50px; } }
@@ -381,6 +382,10 @@ html[data-theme="light"] .bg-main {
         width: 142px !important; }
   .panel:hover:after {
     background-size: 200%; } }
+
+@media (min-width: 1200px) and (min-height: 775px) {
+  .panel {
+    height: 100vh; } }
 
 @keyframes orbit {
   from {
