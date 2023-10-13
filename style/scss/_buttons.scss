@@ -6,42 +6,50 @@
 }
 
 
-@mixin btn-g {
+@mixin btn-color {
     color: #000;
     border: 1px solid #000;
     border-radius: 30px;
-    background-color: $primary;
     padding: 5px 10px;
 }
 
-@mixin btn-g-h {
+@mixin btn-color-h {
     position: relative;
     overflow: hidden;
         &::after {
             content: '';
             position: absolute;
-            bottom: -2px;
-            left: -2px;
+            bottom: 0;
+            left: 0;
             height: 0;
             width: 100%;
-            border-radius: 30px;
-            background-color: $primary;
             color: #fff;
             mix-blend-mode: difference;
             transition: height 0.5s;
         }
         &:hover::after {
             height: 100%;
-            border: 2px solid #000;
         }
 }
 
 .btn {
     @include btn-base;
+    &.g {
+        @include btn-color;
+        background-color: $primary;
+    }
+    &.g-bg {
+        @include btn-color-h;
+        background-color: $primary;
+    }
     &.bw {
-        @include btn-g;
+        @include btn-color;
+        background-color: $bg-light;
     }
     &.hover-bw {
-        @include btn-g-h;
+        @include btn-color-h;
+        &::after {
+            background-color: #fff;
+        }
     }
 }

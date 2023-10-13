@@ -1,2 +1,20 @@
-$grad-1: radial-gradient(circle at 50%, $bg-light, $bg-light 30%, $bg-light 30%, $bg-light 35%, transparent calc(35% + 1px));
-$grad-2: radial-gradient(circle at 50% 50%, $bg-light, $bg-light 240px, $bg-light 240px, $bg-light 250px, #222 251px);
+$grad-1: radial-gradient(circle at 50%,
+        $bg-light,
+        $bg-light 30%,
+        $bg-light 30%,
+        $bg-light 35%,
+        transparent calc(35% + 1px));
+
+$grad-2: radial-gradient(circle at 75% 20%,
+        $primary,
+        $primary 40%,
+        $primary 40%,
+        $primary 45%,
+        transparent calc(45% + 1px));
+        
+$grad-3: radial-gradient(circle at 90% 40%,
+        $bg-dark,
+        $bg-dark 20%,
+        $bg-dark 20%,
+        $bg-dark 25%,
+        transparent calc(25% + 1px));

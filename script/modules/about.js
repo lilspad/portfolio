@@ -56,9 +56,9 @@ for (let i = 0; i < skillsArr.length; i++) {
 const siblingCards = createElement('div', '', [['class', 'flex col g-20 sibling-wrapper']], [cards[0], cards[2]]);
 const skillsList = createElement('ul', "", [['class', 'flex wrap g-10 m-top-50']], skills);
 
-const skillsSection = createElement('div', '<h2 class="heading">My Technologies</h2>', [['class', 'skills hide m-top-20']], [skillsList])
+const skillsSection = createElement('div', '<h2 class="heading">MY STACK</h2>', [['class', 'skills hide m-top-20']], [skillsList])
 cards[1].appendChild(skillsSection);
 
-const panel = createElement('div', '', [['class', 'panel panel-about flex wrap g-20 jus-c ']], [siblingCards, cards[1]]);
+const panel = createElement('div', '', [['class', 'panel panel-about flex wrap g-20 jus-c']], [siblingCards, cards[1]]);
 
 export const about = createElement("div", "", [], [panel]);

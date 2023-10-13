@@ -34,7 +34,8 @@ footer {
   margin-bottom: 10px; }
   .heading.huge {
     font-size: 34px;
-    line-height: 1; }
+    line-height: 1;
+    white-space: nowrap; }
 
 body {
   line-height: 1.5;
@@ -188,30 +189,51 @@ html[data-theme="light"] .bg-main {
   text-align: center;
   cursor: pointer;
   z-index: 5; }
+  .btn.g {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: #C1EE6C; }
+  .btn.g-bg {
+    position: relative;
+    overflow: hidden;
+    background-color: #C1EE6C; }
+    .btn.g-bg::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      color: #fff;
+      mix-blend-mode: difference;
+      transition: height 0.5s; }
+    .btn.g-bg:hover::after {
+      height: 100%; }
   .btn.bw {
     color: #000;
     border: 1px solid #000;
     border-radius: 30px;
-    background-color: #C1EE6C;
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    background-color: #fffaf0; }
   .btn.hover-bw {
     position: relative;
     overflow: hidden; }
     .btn.hover-bw::after {
       content: '';
       position: absolute;
-      bottom: -2px;
-      left: -2px;
+      bottom: 0;
+      left: 0;
       height: 0;
       width: 100%;
-      border-radius: 30px;
-      background-color: #C1EE6C;
       color: #fff;
       mix-blend-mode: difference;
       transition: height 0.5s; }
     .btn.hover-bw:hover::after {
-      height: 100%;
-      border: 2px solid #000; }
+      height: 100%; }
+    .btn.hover-bw::after {
+      background-color: #fff; }
 
 .panel-home {
   padding-top: 200px; }
@@ -220,11 +242,13 @@ html[data-theme="light"] .bg-main {
     width: 300px;
     margin: auto; }
     .panel-home .inner .heads {
-      padding-top: 70px; }
+      padding-top: 70px;
+      letter-spacing: 6px; }
 
 .panel-about {
   padding: 20px;
-  padding-top: 100px; }
+  padding-top: 100px;
+  background: radial-gradient(circle at 75% 20%, #C1EE6C, #C1EE6C 40%, #C1EE6C 40%, #C1EE6C 45%, transparent calc(45% + 1px)); }
   .panel-about .card-about {
     padding: 30px 50px; }
   .panel-about .sibling-wrapper {
@@ -235,7 +259,10 @@ html[data-theme="light"] .bg-main {
 .skill {
   border: 1px solid #222;
   border-radius: 30px;
-  padding: 10px; }
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  max-width: 200px; }
 
 @media (max-width: 636px) {
   .sibling-wrapper .card-about:last-child {
@@ -257,26 +284,25 @@ html[data-theme="light"] .bg-main {
     color: #000;
     border: 1px solid #000;
     border-radius: 30px;
-    background-color: #C1EE6C;
     padding: 5px 10px;
     position: relative;
     overflow: hidden;
+    background-color: #C1EE6C;
     margin-top: 200px; }
     .home-btn::after {
       content: '';
       position: absolute;
-      bottom: -2px;
-      left: -2px;
+      bottom: 0;
+      left: 0;
       height: 0;
       width: 100%;
-      border-radius: 30px;
-      background-color: #C1EE6C;
       color: #fff;
       mix-blend-mode: difference;
       transition: height 0.5s; }
     .home-btn:hover::after {
-      height: 100%;
-      border: 2px solid #000; } }
+      height: 100%; }
+    .home-btn::after {
+      background-color: #C1EE6C; } }
 
 @media (min-width: 636px) and (max-width: 793px) {
   .panel-about .sibling-wrapper {
@@ -319,6 +345,9 @@ html[data-theme="light"] .bg-main {
   .panel {
     padding-top: 100px;
     width: 80%; }
+    .panel.panel-about {
+      width: 100%;
+      padding: 100px; }
     .panel .inner {
       height: 650px;
       width: 500px; }
@@ -334,14 +363,17 @@ html[data-theme="light"] .bg-main {
 
 @media (min-width: 992px) {
   .panel-about.wrap {
-    flex-wrap: nowrap;
-    max-width: 1025px; }
+    flex-wrap: nowrap; }
+    .panel-about.wrap .card-about, .panel-about.wrap .sibling-wrapper {
+      max-width: 550px; }
     .panel-about.wrap .sibling-wrapper {
       flex: 1 0 320px; }
       .panel-about.wrap .sibling-wrapper .card-about:first-child {
         height: 100%; } }
 
 @media (min-width: 1128px) {
+  header {
+    margin-top: 10px; }
   .panel-about.wrap .sibling-wrapper {
     flex: 1 0 400px; }
   .skills.hide,
@@ -352,14 +384,18 @@ html[data-theme="light"] .bg-main {
   .wrapper {
     position: relative;
     width: 50px; }
+    .wrapper::before {
+      content: 'v';
+      opacity: 0.1;
+      margin-left: 2px; }
     .wrapper .orbit {
       width: 435px;
       height: 435px;
       position: absolute;
       top: -115px;
       left: 70px;
-      transform: rotate(-34deg);
-      animation: orbit 1s forwards ease-out; }
+      transform: rotate(-35deg);
+      animation: orbit 0.8s forwards ease-out; }
       .wrapper .orbit .v {
         position: absolute;
         top: -23px;
@@ -367,35 +403,42 @@ html[data-theme="light"] .bg-main {
         transform: rotate(30deg); }
   .home-btn {
     padding-bottom: 50px; }
+  .panel * {
+    transition: padding 0.5s, height 0.5s; }
   .panel .inner {
     animation: spread 0.5s both ease-out alternate;
     align-items: normal; }
-    .panel .inner:hover .orbit {
-      animation: orbit-quarter 0.5s forwards ease-out; }
     .panel .inner .heads {
-      padding: 80px 70px 0px 56px;
+      padding: 80px 91px 0px 40px;
       color: #fffaf0;
       mix-blend-mode: difference; }
       .panel .inner .heads .off {
-        margin-left: -65px; }
+        margin-left: -75px; }
       .panel .inner .heads span {
-        width: 142px !important; }
+        width: 158px !important; }
+  .panel:hover .heads {
+    padding: 80px 120px 0px 130px; }
+    .panel:hover .heads .orbit {
+      animation: orbit-quarter 0.5s forwards ease-out; }
+  .panel:hover .home-btn {
+    height: 682px;
+    width: 682px; }
   .panel:hover:after {
-    background-size: 200%; } }
+    background-size: 220%; } }
 
 @media (min-width: 1200px) and (min-height: 775px) {
-  .panel {
+  .panel-home {
     height: 100vh; } }
 
 @keyframes orbit {
   from {
     transform: rotate(-135deg); }
   to {
-    transform: rotate(-394deg); } }
+    transform: rotate(-395deg); } }
 
 @keyframes orbit-quarter {
   from {
-    transform: rotate(-34deg); }
+    transform: rotate(-35deg); }
   to {
     transform: rotate(-135deg); } }
 
