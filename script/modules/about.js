@@ -10,6 +10,11 @@ const links = [
   {resume: "../../media/credentials/01LilyPaczesniak_CVNew.pdf"}
   ];
 
+const skillsArr = ['HTML', 'CSS/Sass', 'JavaScript',
+  'React', 'node', 'Python', 'Flask', 'Bash', 'SQL',
+  'PHP', 'Git', 'Tailwind', 'Vite'
+  ];
+
 const linkElements = [];
 
 links.forEach((link) => {
@@ -18,18 +23,18 @@ links.forEach((link) => {
 
   const src = Object.values(link).toString();
 
-  const linkElement = createElement("a", (name + " ➭"), [["class", "btn bw hover-bw"], ["href", src], ["target", "_blank"]]);
+  const linkElement = createElement("a", (name + " ➭"), [["class", "btn bw hover-bw fs-1"], ["href", src], ["target", "_blank"]]);
   linkElements.push(linkElement);
 })
 
 const heading1 = createElement("h2", "A LITTLE BIT ABOUT ME", [["class", "heading"]]);
-const content1 = createElement("p", text1);
+const content1 = createElement("p", text1, [['class', 'fs-1']]);
 
 const heading2 = createElement("h2", "A LITTLE BIT ABOUT CODE", [["class", "heading"]]);
-const content2 = createElement("p", text2);
+const content2 = createElement("p", text2, [['class', 'fs-1']]);
 
 const heading3 = createElement("h2", "CREDENTIALS", [["class", "heading"]]);
-const content3 = createElement("div", "", [["class", "flex col g-10 ag-c pad-20"]], linkElements);
+const content3 = createElement("div", "", [["class", "flex wrap g-20 ag-c jus-c pad-20"]], linkElements);
 
 const headings = [heading1, heading2, heading3];
 const content = [content1, content2, content3];
@@ -37,8 +42,23 @@ const content = [content1, content2, content3];
 const cards = [];
 
 for (let i = 0; i < headings.length; i++) {
-  const card = createElement("div", "", [["class", "card"]], [headings[i], content[i]]);
+  const card = createElement("div", "", [["class", "card card-about bg-w rounded-reg"]], [headings[i], content[i]]);
   cards.push(card);
 }
 
-export const about = createElement("div", "", [["id", "about"]], cards);
+const skills = [];
+
+for (let i = 0; i < skillsArr.length; i++) {
+  const   skill = createElement("li", skillsArr[i], [["class", "skill fs-1"]]);
+  skills.push(skill);
+}
+
+const siblingCards = createElement('div', '', [['class', 'flex col g-20 sibling-wrapper']], [cards[0], cards[2]]);
+const skillsList = createElement('ul', "", [['class', 'flex wrap g-10 m-top-50']], skills);
+
+const skillsSection = createElement('div', '<h2 class="heading">My Technologies</h2>', [['class', 'skills hide m-top-20']], [skillsList])
+cards[1].appendChild(skillsSection);
+
+const panel = createElement('div', '', [['class', 'panel panel-about flex wrap g-20 jus-c ']], [siblingCards, cards[1]]);
+
+export const about = createElement("div", "", [], [panel]);

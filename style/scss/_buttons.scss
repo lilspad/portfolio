@@ -1,15 +1,14 @@
 /** Buttons **/
 @mixin btn-base {
     text-align: center;
-    width: 200px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 5;
 }
 
 
 @mixin btn-g {
     color: #000;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 30px;
     background-color: $primary;
     padding: 5px 10px;

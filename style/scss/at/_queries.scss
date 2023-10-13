@@ -1,5 +1,11 @@
 @import 'breakpoints';
 
+@media (max-width: $sm) {
+    .sibling-wrapper .card-about:last-child {
+        display: none;
+    }
+}
+
 @media (min-width: $sm) {
     footer {
         flex-wrap: nowrap;
@@ -15,11 +21,28 @@
     }
 }
 
+
 @media (max-width: $md) {
     .home-btn {
         @include btn-g;
         @include btn-g-h;
         margin-top: 200px;
+    }
+}
+
+@media (min-width: $sm) and (max-width: $md) {
+    .panel-about .sibling-wrapper {
+        flex-direction: row;
+        .card-about:first-child {
+            flex: 1 0 300px;
+            width: 100%;
+        }
+        .card-about:last-child {
+            width: 250px;
+            display: block;
+            max-height: 322px;
+            align-self: end;
+        }
     }
 }
 
@@ -53,6 +76,9 @@
         justify-content: center;
         padding-bottom: 100px;
     }
+    .sibling-wrapper .card-about:last-child {
+        display: none;
+    }
     .panel {
         padding-top: 100px;
         width: 80%;
@@ -74,6 +100,31 @@
     }
     footer {
         padding: 50px;
+    }
+}
+
+@media (min-width: $lg) {
+    .panel-about.wrap {
+        flex-wrap: nowrap;
+        max-width: 1025px;
+        .sibling-wrapper {
+            flex: 1 0 320px;
+            .card-about:first-child {
+                height: 100%;
+        }
+        }
+    }
+}
+
+@media (min-width: 1128px) {
+    .panel-about.wrap {
+        .sibling-wrapper {
+            flex: 1 0 400px;
+        }
+    }
+    .skills.hide,
+    .sibling-wrapper .card-about:last-child {
+        display: block;
     }
 }
 

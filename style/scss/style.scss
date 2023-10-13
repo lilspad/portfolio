@@ -30,6 +30,7 @@ header {
 
 footer {
     flex-direction: column;
+    padding-top: 50px;
 }
 
-@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'buttons', 'home', 'at/queries', 'at/animations';
+@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'panel', 'buttons', 'home', 'about', 'at/queries', 'at/animations';

@@ -11,6 +11,6 @@ const div = createElement('div', '', [['class', 'heads']], [head1, head2, head3]
 const inner = createElement('div', '', [['class', 'inner flex col ag-c jus-between']], [div, link])
 
 
-const panel = createElement('div', '', [['class', 'panel flex col ag-c jus-c bg-spot']], [inner])
+const panel = createElement('div', '', [['class', 'panel panel-home flex col ag-c jus-c bg-spot']], [inner])
 
 export const home = createElement('div', '', [], [panel])

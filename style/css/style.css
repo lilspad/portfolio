@@ -24,7 +24,8 @@ header {
   z-index: 10; }
 
 footer {
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 50px; }
 
 .heading {
   font-family: "Slackside One", cursive;
@@ -93,6 +94,10 @@ body {
 .obf-cov {
   object-fit: cover; }
 
+/* Other */
+.hide {
+  display: none; }
+
 /* Dimensions */
 .w-full {
   width: 100%; }
@@ -150,6 +155,9 @@ body {
   .bg-b * {
     color: #fff; }
 
+.bg-w {
+  background-color: #fffaf0; }
+
 html {
   background-color: #222; }
 
@@ -168,15 +176,21 @@ html {
 html[data-theme="light"] .bg-main {
   background-color: #fffaf0; }
 
+.panel {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: auto; }
+
 /** Buttons **/
 .btn {
   text-align: center;
-  width: 200px;
   cursor: pointer;
-  z-index: 10; }
+  z-index: 5; }
   .btn.bw {
     color: #000;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 30px;
     background-color: #C1EE6C;
     padding: 5px 10px; }
@@ -199,19 +213,33 @@ html[data-theme="light"] .bg-main {
       height: 100%;
       border: 2px solid #000; }
 
-.panel {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  margin: auto;
+.panel-home {
   padding-top: 200px; }
-  .panel .inner {
+  .panel-home .inner {
     height: 500px;
     width: 300px;
     margin: auto; }
-    .panel .inner .heads {
+    .panel-home .inner .heads {
       padding-top: 70px; }
+
+.panel-about {
+  padding: 20px;
+  padding-top: 100px; }
+  .panel-about .card-about {
+    padding: 30px 50px; }
+  .panel-about .sibling-wrapper {
+    flex: 1 1 300px; }
+  .panel-about .btn {
+    min-width: 150px; }
+
+.skill {
+  border: 1px solid #222;
+  border-radius: 30px;
+  padding: 10px; }
+
+@media (max-width: 636px) {
+  .sibling-wrapper .card-about:last-child {
+    display: none; } }
 
 @media (min-width: 636px) {
   footer {
@@ -227,7 +255,7 @@ html[data-theme="light"] .bg-main {
 @media (max-width: 793px) {
   .home-btn {
     color: #000;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 30px;
     background-color: #C1EE6C;
     padding: 5px 10px;
@@ -249,6 +277,18 @@ html[data-theme="light"] .bg-main {
     .home-btn:hover::after {
       height: 100%;
       border: 2px solid #000; } }
+
+@media (min-width: 636px) and (max-width: 793px) {
+  .panel-about .sibling-wrapper {
+    flex-direction: row; }
+    .panel-about .sibling-wrapper .card-about:first-child {
+      flex: 1 0 300px;
+      width: 100%; }
+    .panel-about .sibling-wrapper .card-about:last-child {
+      width: 250px;
+      display: block;
+      max-height: 322px;
+      align-self: end; } }
 
 @media (min-width: 793px) {
   .heading {
@@ -274,6 +314,8 @@ html[data-theme="light"] .bg-main {
     align-items: end;
     justify-content: center;
     padding-bottom: 100px; }
+  .sibling-wrapper .card-about:last-child {
+    display: none; }
   .panel {
     padding-top: 100px;
     width: 80%; }
@@ -288,6 +330,22 @@ html[data-theme="light"] .bg-main {
     background-size: 150%; }
   footer {
     padding: 50px; } }
+
+@media (min-width: 992px) {
+  .panel-about.wrap {
+    flex-wrap: nowrap;
+    max-width: 1025px; }
+    .panel-about.wrap .sibling-wrapper {
+      flex: 1 0 320px; }
+      .panel-about.wrap .sibling-wrapper .card-about:first-child {
+        height: 100%; } }
+
+@media (min-width: 1128px) {
+  .panel-about.wrap .sibling-wrapper {
+    flex: 1 0 400px; }
+  .skills.hide,
+  .sibling-wrapper .card-about:last-child {
+    display: block; } }
 
 @media (min-width: 1200px) {
   .wrapper {
