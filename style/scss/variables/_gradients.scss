@@ -1,2 +1,2 @@
-$grad-1: radial-gradient(ellipse at 60% 45%, $accent-1, transparent 35%);
-$grad-2: radial-gradient(ellipse at 90% 75%, $secondary, transparent 60%);
+$grad-1: radial-gradient(circle at 50%, $bg-light, $bg-light 30%, $bg-light 30%, $bg-light 35%, transparent calc(35% + 1px));
+$grad-2: radial-gradient(circle at 50% 50%, $bg-light, $bg-light 240px, $bg-light 240px, $bg-light 250px, #222 251px);

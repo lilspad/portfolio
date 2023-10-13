@@ -1,6 +1,31 @@
 .bg-b {
-    background-color: #000;
+    background-color: $bg-dark;
     * {
         color: #fff; 
+    }
+}
+
+html {
+    background-color: $bg-dark;
+}
+
+.bg-spot {
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        min-width: 300px;
+        background: $grad-1 no-repeat;
+        background-size: 100%;
+        background-position: 50%;
+        transition: all 0.5s;
+        margin: auto;
+        z-index: -5;
+    }
+}
+
+html[data-theme="light"] {
+    .bg-main {
+        background-color: $bg-light;
     }
 }

@@ -1,0 +1,133 @@
+@import 'breakpoints';
+
+@media (min-width: $sm) {
+    footer {
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        nav {
+            justify-content: end;
+            padding: 50px;
+        }
+        .copyright {
+            align-self: end;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .home-btn {
+        @include btn-g;
+        @include btn-g-h;
+        margin-top: 200px;
+    }
+}
+
+@media (min-width: $md) {
+    .heading {
+        font-size: 48px;
+        margin-bottom: 20px;
+        &.huge {
+            font-size: 72px;
+        }
+    }
+    .fs-1 {
+        font-size: 1.2rem;
+    }
+    .fs-2 {
+        font-size: 1.5rem;
+    }
+    .fs-3 {
+        font-size: 1.7rem; 
+    }
+    .home-btn {
+        position: absolute;
+        width: 540px;
+        height: 540px;
+        border-radius: 50%;
+        top: 105px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+    .panel {
+        padding-top: 100px;
+        width: 80%;
+        .inner {
+            height: 650px;
+            width: 500px; 
+            .heads {
+                padding-top: 140px;
+            }
+        }
+    }
+    .bg-spot {
+        &::after {
+            min-width: 600px;
+            max-width: 895px;
+            background-size: 150%;
+            //animation: spotlight 1s;
+        }
+    }
+    footer {
+        padding: 50px;
+    }
+}
+
+@media (min-width: $xlg) {
+    .wrapper {
+        position: relative;
+        width: 50px;
+        .orbit {
+            width: 435px;
+            height: 435px;
+            position: absolute;
+            top: -115px;
+            left: 70px;
+            transform: rotate(-34deg);
+            animation: orbit 1s forwards ease-out;
+            .v {
+                position: absolute;
+                top: -23px;
+                left: 15px;
+                transform: rotate(30deg);
+            }
+        }
+
+    }
+    .home-btn {
+        padding-bottom: 50px;
+    }
+    .panel {
+        .inner {
+            animation: spread 0.5s both ease-out alternate;
+            align-items: normal;
+            &:hover {
+                .orbit {
+                    animation: orbit-quarter 0.5s forwards ease-out;
+                }
+            }
+            .heads {
+                padding: 80px 70px 0px 56px;
+                color: $bg-light;
+                mix-blend-mode: difference;
+                .off {
+                    margin-left: -65px;
+                }
+                span {
+                    width: 142px !important;
+                }
+            }
+        }
+        &:hover {
+            &:after {
+            background-size: 200%;
+            }
+        }
+
+    }
+}
+

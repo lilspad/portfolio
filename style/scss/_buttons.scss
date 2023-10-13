@@ -1,38 +1,48 @@
 /** Buttons **/
 @mixin btn-base {
-    padding: 10px 15px;
-    border: 2px solid #000;
-    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 
-@mixin btn-bw {
+@mixin btn-g {
     color: #000;
-    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background-color: $primary;
+    padding: 5px 10px;
 }
 
-.btn {
-    @include btn-base;
-    &.bw {
-        @include btn-bw;
-    }
-    &.hover-bw {
-        position: relative;
+@mixin btn-g-h {
+    position: relative;
+    overflow: hidden;
         &::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
+            bottom: -2px;
+            left: -2px;
             height: 0;
             width: 100%;
-            border-radius: 3px;
-            background-color: #fff;
+            border-radius: 30px;
+            background-color: $primary;
             color: #fff;
             mix-blend-mode: difference;
             transition: height 0.5s;
         }
         &:hover::after {
             height: 100%;
+            border: 2px solid #000;
         }
+}
+
+.btn {
+    @include btn-base;
+    &.bw {
+        @include btn-g;
+    }
+    &.hover-bw {
+        @include btn-g-h;
     }
 }

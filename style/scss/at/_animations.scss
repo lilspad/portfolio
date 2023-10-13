@@ -1,0 +1,37 @@
+@keyframes orbit {
+    from {
+        transform: rotate(-135deg);
+    }
+
+    to {
+        transform: rotate(-394deg)
+    }
+}
+
+@keyframes orbit-quarter {
+    from {
+        transform: rotate(-34deg);
+    }
+
+    to {
+        transform: rotate(-135deg)
+    }
+}
+
+@keyframes spread {
+    from {
+        width: 500px;
+    }
+    to {
+        width: 972px;
+    }
+}
+
+@keyframes spotlight {
+    from {
+        background-size: 150%;
+    }
+    to {
+        background-size: 250%;
+    }
+}

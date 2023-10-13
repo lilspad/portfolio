@@ -2,7 +2,7 @@ export default function createElement(tag, inner='', attr=[], children=[]) {
   const element = document.createElement(tag);
 
   if (inner) {
-    element.innerText = inner;
+    element.innerHTML = inner;
   }
   
   if (attr) {

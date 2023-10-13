@@ -16,9 +16,6 @@
     &.col {
         flex-direction: column;
     }
-    &.row-reverse {
-        flex-direction: row-reverse;
-    }
     &.ag-c {
         align-items: center;
     }
@@ -35,6 +32,10 @@
 
 .ag-self-end {
     align-self: end;
+}
+
+.jus-self-end {
+    justify-self: end;
 }
 
 /* Position */
