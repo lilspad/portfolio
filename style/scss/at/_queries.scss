@@ -231,6 +231,11 @@
         }
 
     }
+    .bg-spot {
+        &::after {
+            background-size: 150%;
+        }
+    }
 }
 
 @media (min-width: $xlg) and (min-height: 775px) {

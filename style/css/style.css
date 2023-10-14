@@ -503,7 +503,9 @@ html[data-theme="light"] .bg-main {
     height: 682px;
     width: 682px; }
   .panel:hover:after {
-    background-size: 220%; } }
+    background-size: 220%; }
+  .bg-spot::after {
+    background-size: 150%; } }
 
 @media (min-width: 1200px) and (min-height: 775px) {
   .panel-home {
