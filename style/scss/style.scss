@@ -23,7 +23,7 @@ header {
     color: #fff;
     height: 60px;
     max-width: 550px;
-    margin: 5px;
+    margin-top: 5px;
     padding: 10px 30px;
     z-index: 10;
 }
@@ -33,4 +33,4 @@ footer {
     padding-top: 50px;
 }
 
-@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'panel', 'buttons', 'home', 'about', 'at/queries', 'at/animations';
+@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'panel', 'buttons', 'home', 'about', 'work', 'at/queries', 'at/animations';

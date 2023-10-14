@@ -9,6 +9,10 @@
     background-color: $bg-light;
 }
 
+.bg-g {
+    background-color: $primary;
+}
+
 html {
     background-color: $bg-dark;
 }
@@ -20,7 +24,7 @@ html {
         inset: 0;
         min-width: 300px;
         background: $grad-1 no-repeat;
-        background-size: 100%;
+        background-size: 125%;
         background-position: 50%;
         transition: all 0.5s;
         margin: auto;

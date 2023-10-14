@@ -1,5 +1,15 @@
 @import 'breakpoints';
 
+@media (min-width: 394px) {
+    .card.project {
+        flex: 0 1 300px;
+        &.other {
+            flex: 1 1 300px;
+            max-width: 600px;
+        }
+    }
+}
+
 @media (max-width: $sm) {
     .sibling-wrapper .card-about:last-child {
         display: none;
@@ -54,9 +64,15 @@
     .heading {
         font-size: 48px;
         margin-bottom: 20px;
+        &.big {
+        font-size: 52px;
+        }
         &.huge {
             font-size: 72px;
         }
+    }
+    .fs-n8 {
+        font-size: 1rem;
     }
     .fs-1 {
         font-size: 1.2rem;
@@ -103,8 +119,16 @@
             min-width: 600px;
             max-width: 900px;
             max-height: 750px;
-            background-size: 150%;
+            background-size: 175%;
             //animation: spotlight 1s;
+        }
+    }
+
+    .card.project {
+        height: 500px;
+        flex: 1 1 300px;
+        &.other {
+            max-width: 900px;
         }
     }
     footer {
@@ -128,9 +152,6 @@
 }
 
 @media (min-width: 1128px) {
-    header {
-        margin-top: 10px;
-    }
     .panel-about.wrap {
         .sibling-wrapper {
             flex: 1 0 400px;
@@ -143,6 +164,9 @@
 }
 
 @media (min-width: $xlg) {
+    header {
+        margin-top: 15px;
+    }
     .wrapper {
         position: relative;
         width: 50px;

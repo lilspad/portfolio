@@ -19,7 +19,7 @@ header {
   color: #fff;
   height: 60px;
   max-width: 550px;
-  margin: 5px;
+  margin-top: 5px;
   padding: 10px 30px;
   z-index: 10; }
 
@@ -32,6 +32,9 @@ footer {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 10px; }
+  .heading.big {
+    font-size: 30px;
+    line-height: 1; }
   .heading.huge {
     font-size: 34px;
     line-height: 1;
@@ -40,6 +43,9 @@ footer {
 body {
   line-height: 1.5;
   font-family: "Karla", sans-serif; }
+
+.fs-n8 {
+  font-size: 0.8rem; }
 
 .fs-1 {
   font-size: 1rem; }
@@ -159,6 +165,9 @@ body {
 .bg-w {
   background-color: #fffaf0; }
 
+.bg-g {
+  background-color: #C1EE6C; }
+
 html {
   background-color: #222; }
 
@@ -168,7 +177,7 @@ html {
   inset: 0;
   min-width: 300px;
   background: radial-gradient(circle at 50%, #fffaf0, #fffaf0 30%, #fffaf0 30%, #fffaf0 35%, transparent calc(35% + 1px)) no-repeat;
-  background-size: 100%;
+  background-size: 125%;
   background-position: 50%;
   transition: all 0.5s;
   margin: auto;
@@ -262,7 +271,68 @@ html[data-theme="light"] .bg-main {
   padding: 10px;
   flex: 1;
   text-align: center;
-  max-width: 200px; }
+  max-width: 200px;
+  white-space: nowrap; }
+
+.panel-work {
+  padding: 20px;
+  padding-top: 100px;
+  max-width: 900px; }
+  .panel-work .project {
+    height: 400px;
+    flex: 1 0 265px;
+    max-width: 500px;
+    padding: 30px; }
+    .panel-work .project .caption {
+      text-align: right; }
+    .panel-work .project .demo {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      padding: 50px;
+      border-radius: 30px; }
+    .panel-work .project .other-link {
+      max-width: 240px;
+      padding: 10px 20px; }
+
+.project {
+  border: 1px solid #fffaf0; }
+  .project::after {
+    position: absolute;
+    content: '';
+    background-color: #C1EE6C;
+    top: 10px;
+    left: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    z-index: -5;
+    transition: 0.5s;
+    overflow: hidden; }
+  .project:hover::after {
+    top: 0px;
+    left: 0px;
+    border-width: 0px;
+    border-radius: 25px; }
+
+.tech {
+  background-color: #fffaf0;
+  border: 1px solid #222;
+  border-radius: 30px;
+  padding: 10px 20px;
+  flex: 1;
+  text-align: center;
+  max-width: 260px;
+  white-space: nowrap; }
+
+@media (min-width: 394px) {
+  .card.project {
+    flex: 0 1 300px; }
+    .card.project.other {
+      flex: 1 1 300px;
+      max-width: 600px; } }
 
 @media (max-width: 636px) {
   .sibling-wrapper .card-about:last-child {
@@ -320,8 +390,12 @@ html[data-theme="light"] .bg-main {
   .heading {
     font-size: 48px;
     margin-bottom: 20px; }
+    .heading.big {
+      font-size: 52px; }
     .heading.huge {
       font-size: 72px; }
+  .fs-n8 {
+    font-size: 1rem; }
   .fs-1 {
     font-size: 1.2rem; }
   .fs-2 {
@@ -357,7 +431,12 @@ html[data-theme="light"] .bg-main {
     min-width: 600px;
     max-width: 900px;
     max-height: 750px;
-    background-size: 150%; }
+    background-size: 175%; }
+  .card.project {
+    height: 500px;
+    flex: 1 1 300px; }
+    .card.project.other {
+      max-width: 900px; }
   footer {
     padding: 50px; } }
 
@@ -372,8 +451,6 @@ html[data-theme="light"] .bg-main {
         height: 100%; } }
 
 @media (min-width: 1128px) {
-  header {
-    margin-top: 10px; }
   .panel-about.wrap .sibling-wrapper {
     flex: 1 0 400px; }
   .skills.hide,
@@ -381,6 +458,8 @@ html[data-theme="light"] .bg-main {
     display: block; } }
 
 @media (min-width: 1200px) {
+  header {
+    margin-top: 15px; }
   .wrapper {
     position: relative;
     width: 50px; }

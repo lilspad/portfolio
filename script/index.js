@@ -1,5 +1,6 @@
 import {home} from "./modules/home.js";
 import {about} from "./modules/about.js";
+import {work} from "./modules/work.js";
 
 
 function getContent(fragmentId, callback){
@@ -7,7 +8,7 @@ function getContent(fragmentId, callback){
   var pages = {
     home: home.innerHTML,
     about: about.innerHTML,
-    work: "This page will describe what my site is about",
+    work: work.innerHTML,
     contact: "Contact me on this page if you have any questions"
   };
 
