@@ -27,16 +27,16 @@ function loadContent(){
   }
   //const bg = document.querySelectorAll('.bg-inner.main')[0];
   getContent(fragmentId, function (content) {
-    if (fragmentId === 'home') {
+    //if (fragmentId === 'home') {
     contentDiv.innerHTML = content;
-    } else {
-      /*const panel = document.querySelectorAll('.panel')[0];
+    /*} else {
+      const panel = document.querySelectorAll('.panel')[0];
       bg.style.animation = 'spotlight-full 0.8s'
-      panel.style.opacity = '0';*/
+      panel.style.opacity = '0';
       setTimeout(() => {
         contentDiv.innerHTML = content;
       }, 700)
-    }
+    }*/
   });
 
 };
