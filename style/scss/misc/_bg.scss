@@ -18,17 +18,15 @@ html {
 }
 
 .bg-spot {
-    &::after {
-        content: '';
+    .bg-inner {
         position: absolute;
         inset: 0;
         min-width: 300px;
         background: $grad-1 no-repeat;
-        background-size: 125%;
+        background-size: 0%;
         background-position: 50%;
         transition: all 0.5s;
         margin: auto;
-        z-index: -5;
     }
 }
 

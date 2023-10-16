@@ -6,10 +6,24 @@
     &.big {
         font-size: 30px;
         line-height: 1;
+        text-transform: uppercase;
     }
     &.huge {
-        font-size: 34px;
+        font-family: $fam-huge;
+        font-size: 28px;
         line-height: 1;
         white-space: nowrap;
     }
+}
+
+.head-art {
+    font-size: 14px;
+    .head-sh-g {
+        text-shadow: -3px 3px $primary;
+        text-transform: uppercase;
+    }
+}
+
+.head-sh-w {
+    text-shadow: -1px 2px $bg-light;
 }

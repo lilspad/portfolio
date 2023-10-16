@@ -1,4 +1,5 @@
 import createElement from "./create.js";
+import { homeButton } from "./home-button.js";
 
 const text1 = "Hi! 👋 I'm Lily, a software engineer learning, creating and enjoying life in London.<br><br> As any good escapist I love films, games and music, but I also have an abnormal creativity level which leads me to make... well, anything from bread to knitwear to websites. I've worked in the coffee industry for almost 7 years, so I can also make a great pick-me-up in a mug. However, I decided to finally leave hospitality to pursue a career in tech.";
 
@@ -60,4 +61,4 @@ cards[1].appendChild(skillsSection);
 
 const panel = createElement('div', '', [['class', 'panel panel-about flex wrap g-20 jus-c']], [siblingCards, cards[1]]);
 
-export const about = createElement("div", "", [], [panel]);
+export const about = createElement("div", "", [], [homeButton.cloneNode(true), panel]);

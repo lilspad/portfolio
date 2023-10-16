@@ -1,4 +1,5 @@
 import createElement from "./create.js";
+import { homeButton } from "./home-button.js";
 
 const projects = [
   {
@@ -51,32 +52,32 @@ const projects = [
 const other = [
   {
     name: 'This portfolio',
-    src: ''
+    src: 'https://github.com/lilspad/lilspad.github.io'
   },
   {
     name: 'PyTree " CLI',
-    src: '',
+    src: 'https://github.com/lilspad/PyTree',
   },
   {
     name: 'Booki | Mock-up',
-    src: ''
+    src: 'https://lilspad.github.io/booki/'
   },
   {
     name: 'Flickr | Clone Site',
-    src: ''
+    src: 'https://lilspad.github.io/flickr-clone/'
   },
   {
     name: 'KoiBoi | Tiny Game',
-    src: ''
+    src: 'https://koi-boi.herokuapp.com/'
   },
   {
     name: 'Repositories ➭',
-    src: '',
+    src: 'https://github.com/lilspad',
     class: 'lib'
   },
   {
     name: 'Pens ➭',
-    src: '',
+    src: 'https://codepen.io/your-work',
     class: 'lib'
   }
 ]
@@ -95,11 +96,13 @@ const createLinks = (objArr) => {
   const libs = createElement('ul', '', [['class', 'flex wrap g-10 pad-30']]);
   for (let i = 0; i < objArr.length; i++) {
     if (objArr[i].class) {
-      const item = createElement('a', objArr[i].name, [['href', objArr[i].src], ['target', '_blank'], ['class', 'btn bw hover-bw fs-1 other-link']])
-      libs.append(item);
+      const item = createElement('a', objArr[i].name, [['href', objArr[i].src], ['target', '_blank']])
+      const liItem = createElement('li', '', [['class', 'btn bw hover-bw fs-1 other-link']], [item]);
+      libs.append(liItem);
     } else {
-      const item = createElement('a', objArr[i].name, [['href', objArr[i].src], ['target', '_blank'], ['class', 'btn bw hover-bw fs-1 other-link']])
-      otherList.append(item);
+      const item = createElement('a', objArr[i].name, [['href', objArr[i].src], ['target', '_blank']])
+      const liItem = createElement('li', '', [['class', 'btn bw hover-bw fs-1 other-link']], [item]);
+      otherList.append(liItem);
     }
     
   }
@@ -107,7 +110,7 @@ const createLinks = (objArr) => {
 }
 
 const createProjectCard = (p) => {
-  const head1 = createElement('h3', p.type, [['class', 'fs-n8']]);
+  const head1 = createElement('h3', p.type, [['class', 'fs-n8 head-sh-w']]);
   const head2 = createElement('h2', p.name, [['class', 'heading big']]);
   const caption = createElement('div', '', [['class', 'caption']], [head1, head2]);
   const list = createElement('ul', '', [['class', 'flex wrap g-10 m-top-20']], createStack(p.techStack));
@@ -117,7 +120,7 @@ const createProjectCard = (p) => {
   return project;
 }
 
-const otherCard = createElement('div', '<h3 class="caption fs-1">Other projects</h2>', [['class', 'card project other flex col jus-between pos-rel rounded-reg']], createLinks(other))
+const otherCard = createElement('div', '<h3 class="caption fs-1 head-sh-w">Other projects</h2>', [['class', 'card project other flex col jus-between pos-rel rounded-reg']], createLinks(other))
 
 const panel = createElement('div', '', [['class', 'panel panel-work flex wrap g-20 ag-c jus-c']]);
 
@@ -127,4 +130,4 @@ for (let i = 0; i < projects.length; i++) {
 }
 panel.append(otherCard);
 
-export const work = createElement('div', '', [], [panel]);
+export const work = createElement('div', '', [], [homeButton.cloneNode(true), panel]);

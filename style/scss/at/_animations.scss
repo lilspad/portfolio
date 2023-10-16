@@ -1,10 +1,11 @@
+
 @keyframes orbit {
     from {
         transform: rotate(-135deg);
     }
 
     to {
-        transform: rotate(-395deg)
+        transform: rotate(-395deg);
     }
 }
 
@@ -27,11 +28,29 @@
     }
 }
 
+@keyframes distort {
+    from {
+        text-shadow: 0px 0px $accent-1;
+    }
+    to {
+        text-shadow: -3px 3px $accent-1;
+    }
+}
+
 @keyframes spotlight {
     from {
         background-size: 150%;
     }
     to {
         background-size: 250%;
+    }
+}
+
+@keyframes spotlight-full {
+    from {
+        background-size: 0%;
+    }
+    to {
+        background-size: 500%;
     }
 }

@@ -20,3 +20,12 @@ input[type="submit"] {
     border: none;
     outline: none;
 }
+
+textarea, input {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}

@@ -11,6 +11,12 @@ body {
 
 main {
     min-height: calc(100dvh);
+    .bg-inner.main {
+        /*&.reverse {
+            animation: spotlight-full reverse 0.8s ease-in;
+        }*/
+        z-index: -100;
+    }
 }
 
 header {
@@ -19,6 +25,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     background-color: #222222aa;
     color: #fff;
     height: 60px;
@@ -33,4 +40,4 @@ footer {
     padding-top: 50px;
 }
 
-@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'panel', 'buttons', 'home', 'about', 'work', 'at/queries', 'at/animations';
+@import 'variables/index', 'typography/index', 'layout/index', 'spacing/index', 'misc/borders', 'misc/bg', 'panel', 'buttons', 'home', 'about', 'work', 'contact', 'at/queries', 'at/animations';

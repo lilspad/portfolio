@@ -1,0 +1,23 @@
+.panel-contact {
+    padding: 30px;
+    padding-top: 100px;
+    form {
+        flex: 1 0 200px;
+        margin: auto;
+    }
+    .form-div {
+        width: 100%;
+        padding: 10px;
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #222;
+            border-radius: 15px;
+            width: 100%;
+        }
+        textarea {
+            min-width: 200px;
+            width: 100%;
+            flex: 1 1 200px;
+        }
+    }
+}

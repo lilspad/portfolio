@@ -17,6 +17,9 @@
 }
 
 @media (min-width: $sm) {
+    .heading.huge {
+        font-size: 40px;
+    }
     footer {
         flex-wrap: nowrap;
         flex-direction: row-reverse;
@@ -38,6 +41,15 @@
         @include btn-color-h;
         background-color: $primary;
         margin-top: 200px;
+        &::after {
+            background-color: $primary;
+        }
+    }
+    .contact-btn {
+        @include btn-color;
+        @include btn-color-h;
+        background-color: $primary;
+
         &::after {
             background-color: $primary;
         }
@@ -68,8 +80,11 @@
         font-size: 52px;
         }
         &.huge {
-            font-size: 72px;
+            font-size: 56px;
         }
+    }
+    .head-art {
+        font-size: 20px;
     }
     .fs-n8 {
         font-size: 1rem;
@@ -104,7 +119,10 @@
         width: 80%;
         &.panel-about {
             width: 100%;
-            padding: 100px;
+            padding: 160px;
+        }
+        &.panel-work {
+            padding-top: 150px;
         }
         .inner {
             height: 650px;
@@ -113,15 +131,14 @@
                 padding-top: 140px;
             }
         }
+        &.bg-spot {
+            .bg-inner {
+                min-width: 600px;
+                max-width: 899px;
+                max-height: 750px;
+                background-size: 175%;
+            }
     }
-    .bg-spot {
-        &::after {
-            min-width: 600px;
-            max-width: 900px;
-            max-height: 750px;
-            background-size: 175%;
-            //animation: spotlight 1s;
-        }
     }
 
     .card.project {
@@ -137,6 +154,9 @@
 }
 
 @media (min-width: $lg) {
+    .heading.huge {
+        font-size: 64px;
+    }
     .panel-about.wrap {
         flex-wrap: nowrap;
         .card-about, .sibling-wrapper {
@@ -172,8 +192,10 @@
         width: 50px;
         &::before {
             content: 'v';
-            opacity: 0.1;
-            margin-left: 2px;
+            color: #331199;
+            opacity: 0;
+            margin-left: 11px;
+            transition: all 0.3s;
         }
         .orbit {
             width: 435px;
@@ -185,15 +207,15 @@
             animation: orbit 0.8s forwards ease-out;
             .v {
                 position: absolute;
-                top: -23px;
-                left: 15px;
-                transform: rotate(30deg);
+                top: -20px;
+                left: 29px;
+                transform: rotate(40deg);
             }
         }
 
     }
     .home-btn {
-        padding-bottom: 50px;
+        padding-bottom: 64px;
     }
     .panel {
         * {
@@ -203,38 +225,52 @@
             animation: spread 0.5s both ease-out alternate;
             align-items: normal;
             .heads {
-                padding: 80px 91px 0px 40px;
+                padding: 80px 73px 0px 40px;
                 color: $bg-light;
                 mix-blend-mode: difference;
                 .off {
-                    margin-left: -75px;
+                    margin-left: -90px;
                 }
                 span {
                     width: 158px !important;
                 }
+                .head-art {
+                    font-size: 24px;
+                }
+                .head-sh-g {
+                    animation: distort 0.6s;
+                    text-shadow: -3px 3px $accent-1;
+                    transition: text-shadow 0.6s;
+                }
+            }
+        }
+        &.bg-spot {
+            .bg-inner {
+                background-size: 150%;
             }
         }
         &:hover {
             .heads {
-                padding: 80px 120px 0px 130px;
+                padding: 80px 120px 0px 148px;
                 .orbit {
                     animation: orbit-quarter 0.5s forwards ease-out;
+                }
+                .head-sh-g {
+                    text-shadow: -5px 5px #331199;
                 }
             }
             .home-btn {
                 height: 682px;
                 width: 682px;
             }
-            &:after {
+            .bg-inner {
             background-size: 220%;
+            }
+            .wrapper::before {
+                opacity: 1;
             }
         }
 
-    }
-    .bg-spot {
-        &::after {
-            background-size: 150%;
-        }
     }
 }
 
